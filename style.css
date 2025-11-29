@@ -1,3 +1,6 @@
+
+
+
 /* RESET */
 * {
     margin: 0;
@@ -45,42 +48,23 @@ header ul li a:hover {
     color: #39c0ed;
 }
 
-/* HERO / HOME */
+/* HERO */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?village,landscape') 
-                no-repeat center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
     padding-top: 80px;
 }
 
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: #39c0ed;
-    padding: 12px 25px;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #1a97bd;
+.hero-img {
+    width: 800px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 /* SECTIONS */
@@ -93,6 +77,15 @@ header ul li a:hover {
 .section h2 {
     font-size: 32px;
     margin-bottom: 20px;
+}
+
+/* ABOUT */
+#about p {
+    max-width: 900px;
+    margin: 10px auto;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 18px;
 }
 
 /* GALERI */
@@ -125,7 +118,6 @@ header ul li a:hover {
     width: 240px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
 }
 
 .card h3 {
@@ -141,17 +133,78 @@ footer {
     padding: 15px;
     margin-top: 30px;
 }
-.hero-img {
-    width: 900px;       /* ubah sesuai kebutuhan */
-    height: auto 200px;       /* biar tidak gepeng */
-    display: block;
-    margin: 0 auto;     /* supaya berada di tengah */
+
+/* ============================= */
+/*        RESPONSIVE HP         */
+/* ============================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header ul li {
+        margin-left: 0;
+    }
+
+    /* HERO */
+    .hero-img {
+        width: 100%;
+    }
+
+    /* SECTION TITLE */
+    .section h2 {
+        font-size: 26px;
+    }
+
+    #about p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    /* GALERI */
+    .galeri-container img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* CARD PEMDES */
+    .card {
+        width: 90%;
+    }
 }
-/* PARAGRAF ABOUT US */
-#about p {
-    max-width: 900px;
-    margin: 10px auto;
-    text-align: justify;
-    line-height: 1.7;
-    font-size: 18px;
+
+/* ============================= */
+/*      LAYAR SANGAT KECIL      */
+/* ============================= */
+@media (max-width: 480px) {
+
+    .hero-img {
+        width: 95%;
+    }
+
+    header .logo {
+        font-size: 18px;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    #about p {
+        font-size: 15px;
+    }
 }
